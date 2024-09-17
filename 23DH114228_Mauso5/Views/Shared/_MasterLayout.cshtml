@@ -1,0 +1,75 @@
+﻿<style type="text/css">
+    html{
+         font-size:14px;
+         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+    body{
+        background-color:powderblue;
+    }
+    #container{
+        border:2px solid #9ff0fb;
+        border-radius:10px;
+    }
+    header{
+        background-color: azure;
+        border:2px solid black;
+        padding: 10px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .logo img{
+        height:50px;
+    }
+    nav ul{
+        list-style-type:none;
+        display:flex;
+    }
+    nav ul li{
+        margin-left:20px;
+        font-size:1.2rem;
+    }
+    nav ul li img{
+        text-decoration:none;
+        color:beige;
+        font-weight:bold
+    }
+   section{
+       background-color:aliceblue;
+       min-height:300px;
+   }
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="logo">
+                <img src="https://e7.pngegg.com/pngimages/361/627/png-clipart-leaf-logo-green-leaves-green-and-teal-leaf-logo-text-maple-leaf-thumbnail.png" alt="logo" />
+                <h1>Trang web E-commerce</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="~/Home/Trangchu">Trang chủ</a></li>
+                    <li><a href="~/Product/ProductDetail">Sản phẩm</a></li>
+                    <li><a href="~/Product/ShoppingCart">Giỏ hàng</a></li>
+                    <li><a href="~/Home/Contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>     
+           
+                @RenderBody()
+
+        </section>
+        <footer>
+            FOOTER
+        </footer>
+    </div>
+</body>
+</html>
